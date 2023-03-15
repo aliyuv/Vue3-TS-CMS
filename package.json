@@ -15,7 +15,8 @@
   "dependencies": {
     "@typescript-eslint/parser": "5.55.0",
     "normalize.css": "8.0.1",
-    "vue": "^3.2.47"
+    "vue": "^3.2.47",
+    "vue-router": "4.1.6"
   },
   "devDependencies": {
     "@antfu/eslint-config": "0.36.0",
