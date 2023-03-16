@@ -1,12 +1,22 @@
 {
   "extends": "@vue/tsconfig/tsconfig.web.json",
-  "include": ["env.d.ts", "src/**/*", "src/**/*.vue"],
+  "include": [
+    "env.d.ts",
+    "src/**/*",
+    "src/**/*.vue",
+    "auto-imports",
+    "auto-imports.d",
+    "components.d"
+  ],
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
     },
-    "types": ["unplugin-vue-define-options/macros-global"]
+    "types": [
+      "unplugin-vue-define-options/macros-global",
+      "element-plus/global"
+    ]
   },
 
   "references": [
