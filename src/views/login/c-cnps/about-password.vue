@@ -1,5 +1,5 @@
 <template>
-  <div class="app">
+  <div class="app flex justify-between items-center">
     <el-checkbox v-model="checked" label="记住密码" size="large" />
     <el-link type="primary">忘记密码</el-link>
   </div>
@@ -11,10 +11,4 @@ import { ref } from 'vue';
 const checked = ref(false);
 </script>
 
-<style scoped>
-.app {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-</style>
+<style scoped></style>

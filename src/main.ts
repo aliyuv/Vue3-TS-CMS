@@ -1,8 +1,8 @@
 import { createApp } from 'vue';
 import App from './App.vue';
-import 'normalize.css';
+// import 'normalize.css';
 import './index.css';
-import './assets/css/index.less';
+// import './assets/css/index.less';
 import { router } from './router';
 import { store } from './store';
 import { registerIconComponent } from './global/registerIconComponent';

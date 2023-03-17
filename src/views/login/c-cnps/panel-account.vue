@@ -1,24 +1,25 @@
 <template>
   <div class="app">
-    <el-form
-      :model="account"
-      ref="formRef"
-      label-width="60px"
-      :rules="accountRules"
-    >
-      <el-form-item prop="name" label="账号">
-        <el-input v-model="account.name" />
-      </el-form-item>
-      <el-form-item prop="password" label="密码">
-        <el-input v-model="account.password" type="password" />
-      </el-form-item>
-    </el-form>
+    <panel-form-cpn
+      :account="account"
+      :accountRules="accountRules"
+      :isHideasterisk="no"
+      :itemName="'账号'"
+      :itemPassword="'密码'"
+      :itemProp="'name'"
+      :inputType="'password'"
+      :small="'small'"
+      :isShowVerificationCode="no"
+    ></panel-form-cpn>
   </div>
 </template>
 
 <script setup lang="ts">
+import PanelFormCpn from '@/components/login/panel-form-cpn.vue';
 import type { FormRules } from 'element-plus';
-import { reactive } from 'vue';
+import { reactive, ref } from 'vue';
+
+const no = ref(false);
 
 const account = reactive({
   name: '',

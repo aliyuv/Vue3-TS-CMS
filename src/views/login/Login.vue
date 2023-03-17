@@ -1,5 +1,5 @@
 <template>
-  <div class="app">
+  <div class="app flex justify-center items-center h-screen w-screen">
     <LoginPanel />
   </div>
 </template>
@@ -10,12 +10,6 @@ import LoginPanel from './c-cnps/login-panel.vue';
 
 <style scoped>
 .app {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  width: 100vw;
-  height: 100vh;
   background: url(../../assets/img/login-bg.svg);
 }
 </style>

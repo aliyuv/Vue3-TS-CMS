@@ -1,17 +1,32 @@
 <template>
-  <div class="panel">
-    <h1 class="title">谵语后台管理系统</h1>
+  <div class="panel text-center w-80 mb-36">
+    <h1 class="mb-4 text-3xl font-extrabold">谵语后台管理系统</h1>
     <el-tabs v-model="activeName" type="border-card" stretch>
       <el-tab-pane name="account">
         <template #label>
-          <el-icon><UserFilled /></el-icon>
-          <span class="text">账号登录</span>
+          <panel-common-content>
+            <template #icon>
+              <UserFilled />
+            </template>
+            <template #label> 账号登录 </template>
+          </panel-common-content>
         </template>
         <panelaccount></panelaccount>
       </el-tab-pane>
-      <el-tab-pane label="Config" name="second">Config</el-tab-pane>
+      <el-tab-pane label="Config" name="second">
+        <template #label>
+          <panel-common-content>
+            <template #icon>
+              <Iphone />
+            </template>
+            <template #label> 手机登录 </template>
+          </panel-common-content>
+        </template>
+        <panelaccount></panelaccount>
+      </el-tab-pane>
     </el-tabs>
     <about-password></about-password>
+    <el-button type="primary" class="w-full">立即登录</el-button>
   </div>
 </template>
 
