@@ -20,7 +20,9 @@ declare module '@vue/runtime-core' {
     ElTabPane: typeof import('element-plus/es')['ElTabPane']
     ElTabs: typeof import('element-plus/es')['ElTabs']
     PanelCommonContent: typeof import('./src/components/login/panel-common-content.vue')['default']
+    PanelCommonLogin: typeof import('./src/components/login/panel-common-login.vue')['default']
     PanelFormCpn: typeof import('./src/components/login/panel-form-cpn.vue')['default']
+    PanelLogin: typeof import('./src/components/login/panel-login.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }

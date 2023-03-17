@@ -1,25 +1,31 @@
 <template>
   <div class="app">
-    <panel-form-cpn
+    <panel-common-login
       :account="account"
+      :placeholder="
+        activeName === `phone`
+          ? { account: `请输入手机号`, code: `请输入验证码` }
+          : { account: `请输入账号`, code: `请输入密码` }
+      "
       :accountRules="accountRules"
-      :isHideasterisk="no"
-      :itemName="'账号'"
-      :itemPassword="'密码'"
-      :itemProp="'name'"
-      :inputType="'password'"
-      :small="'small'"
-      :isShowVerificationCode="no"
-    ></panel-form-cpn>
+      :isHideasterisk="activeName === `phone` ? true : false"
+      :isShowVerificationCode="activeName === `phone` ? true : false"
+      :itemName="activeName === `phone` ? `手机号` : `账号`"
+      :itemPassword="activeName === `phone` ? `验证码` : `密码`"
+      itemProp="name"
+      inputType="password"
+    />
   </div>
 </template>
 
 <script setup lang="ts">
-import PanelFormCpn from '@/components/login/panel-form-cpn.vue';
+import PanelCommonLogin from '@/components/login/panel-common-login.vue';
 import type { FormRules } from 'element-plus';
 import { reactive, ref } from 'vue';
 
-const no = ref(false);
+defineProps<{
+  activeName: string;
+}>();
 
 const account = reactive({
   name: '',

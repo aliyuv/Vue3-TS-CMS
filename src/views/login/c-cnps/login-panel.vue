@@ -11,9 +11,9 @@
             <template #label> 账号登录 </template>
           </panel-common-content>
         </template>
-        <panelaccount></panelaccount>
+        <panelaccount :activeName="activeName"></panelaccount>
       </el-tab-pane>
-      <el-tab-pane label="Config" name="second">
+      <el-tab-pane label="Config" name="phone">
         <template #label>
           <panel-common-content>
             <template #icon>
@@ -22,7 +22,7 @@
             <template #label> 手机登录 </template>
           </panel-common-content>
         </template>
-        <panelaccount></panelaccount>
+        <panelaccount :activeName="activeName"></panelaccount>
       </el-tab-pane>
     </el-tabs>
     <about-password></about-password>
