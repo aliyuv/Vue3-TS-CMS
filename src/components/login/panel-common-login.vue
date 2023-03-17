@@ -15,9 +15,9 @@
 </template>
 
 <script setup lang="ts">
-import type { FormRules } from 'element-plus';
 import panelformcpn from '@/components/login/panel-form-cpn.vue';
-defineProps<{
+import type { FormRules } from 'element-plus';
+const props = defineProps<{
   account: {
     name: string;
     password: string;
@@ -29,7 +29,6 @@ defineProps<{
   itemName: string;
   itemPassword: string;
   inputType: string;
-  small?: 'large' | 'default' | 'small';
   isShowVerificationCode: boolean;
   placeholder: {
     account: string;

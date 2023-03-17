@@ -32,7 +32,6 @@
 <script setup lang="ts">
 import type { FormRules } from 'element-plus';
 import { computed } from 'vue';
-
 const props = defineProps<{
   account: {
     name: string;
@@ -45,14 +44,12 @@ const props = defineProps<{
   itemName: string;
   itemPassword: string;
   inputType: string;
-  small: 'large' | 'default' | 'small';
   isShowVerificationCode: boolean;
   placeholder: {
     account: string;
     code: string;
   };
 }>();
-
 const nameModel = computed({
   get: () =>
     props.isShowVerificationCode ? props.account.phone : props.account.name,

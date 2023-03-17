@@ -66,25 +66,6 @@ const accountRules: FormRules = {
     }
   ]
 };
-
-const phoneRules: FormRules = {
-  name: [
-    { required: true, message: '必须输入手机号', trigger: 'blur' },
-    {
-      pattern: /^1[3456789]\d{9}$/,
-      message: '请输入正确的手机号',
-      trigger: 'blur'
-    }
-  ],
-  password: [
-    { required: true, message: '请输入验证码', trigger: 'blur' },
-    {
-      pattern: /^\d{6}$/,
-      message: '请输入6位数字验证码',
-      trigger: 'blur'
-    }
-  ]
-};
 </script>
 
 <style scoped></style>
