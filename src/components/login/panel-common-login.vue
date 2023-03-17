@@ -6,7 +6,6 @@
       :isHideasterisk="isHideasterisk"
       :itemName="itemName"
       :itemPassword="itemPassword"
-      :itemProp="'name'"
       :inputType="inputType"
       :small="'default'"
       :isShowVerificationCode="isShowVerificationCode"
@@ -18,17 +17,17 @@
 <script setup lang="ts">
 import type { FormRules } from 'element-plus';
 import panelformcpn from '@/components/login/panel-form-cpn.vue';
-
 defineProps<{
   account: {
     name: string;
     password: string;
+    phone: string;
+    code: string;
   };
   accountRules: FormRules;
   isHideasterisk: boolean;
   itemName: string;
   itemPassword: string;
-  itemProp: string;
   inputType: string;
   small?: 'large' | 'default' | 'small';
   isShowVerificationCode: boolean;
