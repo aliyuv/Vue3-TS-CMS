@@ -13,7 +13,7 @@
       :itemName="activeName === `phone` ? `手机号` : `账号`"
       :itemPassword="activeName === `phone` ? `验证码` : `密码`"
       itemProp="name"
-      inputType="password"
+      :inputType="activeName === `phone` ? `text` : `password`"
     />
   </div>
 </template>

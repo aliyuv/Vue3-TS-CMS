@@ -7,7 +7,7 @@
       :itemName="itemName"
       :itemPassword="itemPassword"
       :itemProp="'name'"
-      :inputType="'password'"
+      :inputType="inputType"
       :small="'default'"
       :isShowVerificationCode="isShowVerificationCode"
       :placeholder="placeholder"
